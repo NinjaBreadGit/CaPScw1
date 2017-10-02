@@ -1,0 +1,8 @@
+﻿  stdafx.cpp
+  control.cpp
+h:\visualstudio 2017\capscw1\control\control.cpp(354): error C2471: cannot update program database 'H:\VisualStudio 2017\CaPScw1\control\Debug\vc141.pdb'
+h:\visualstudio 2017\capscw1\control\control.cpp(354): error C2471: cannot update program database 'H:\VisualStudio 2017\CaPScw1\control\Debug\vc141.idb'
+FileTracker : error FTK1006: could not write entry to the file tracking log file: H:\VisualStudio 2017\CaPScw1\control\Debug\control.tlog\CL.read.1.tlog. Not enough quota is available to process this command.
+  
+  
+  

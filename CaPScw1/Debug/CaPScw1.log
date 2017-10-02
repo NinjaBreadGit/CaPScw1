@@ -1,3 +1,2 @@
 ﻿  CaPScw1.cpp
-  CaPScw1.vcxproj -> H:\VisualStudio 2017\CaPScw1\Debug\CaPScw1.exe
-  CaPScw1.vcxproj -> H:\VisualStudio 2017\CaPScw1\Debug\CaPScw1.pdb (Partial PDB)
+h:\visualstudio 2017\capscw1\capscw1\capscw1.cpp(377): error C2471: cannot update program database 'H:\VisualStudio 2017\CaPScw1\CaPScw1\Debug\vc141.pdb'

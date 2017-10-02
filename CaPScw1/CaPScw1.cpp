@@ -13,6 +13,8 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <thread>
+#include <future>
 
 using namespace std;
 using namespace std::chrono;
@@ -198,8 +200,10 @@ vec radiance(const vector<sphere> &spheres, const ray &the_ray, int depth) noexc
 
 	if (hit_sphere.reflection == reflection_type::DIFFUSE)
 	{
-		const double r1 = 2.0 * PI * get_random_number();
-		const double r2 = get_random_number();
+		std::future<double> f_r1(std::async([](double a, double b, double c) {return a * b * c; }, 2.0, PI, get_random_number()));
+		std::future<double> f_r2(std::async([](double a) {return a; }, get_random_number()));
+		const double r1 = f_r1.get();
+		const double r2 = f_r2.get();
 		const vec w = pos_intersection_normal;
 		const vec u = ((abs(w.x) > 0.1 ? vec(0, 1, 0) : vec(1, 0, 0)).cross(w)).normal();
 		const vec v = w.cross(u);
